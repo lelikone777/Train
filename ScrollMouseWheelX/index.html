@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+
+
+
+<script>
+    let promiseQueue = Promise.resolve(); // initialize the promise queue with a resolved promise
+    let promiseCount = 0; // counter to keep track of the number of promises added to the queue
+
+    function addPromiseToQueue() {
+        promiseQueue = promiseQueue.then(() => {
+            promiseCount++;
+            console.log(`Promise ${promiseCount} started`); // log message when promise starts
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    resolve();
+                }, 2000); // resolve the promise after 8 seconds
+            });
+        });
+    }
+
+    function handleScroll(event) {
+        if (event.deltaY > 0) { // scroll down and limit the number of promises to 6
+            addPromiseToQueue();
+        }
+    }
+
+    window.addEventListener("wheel", handleScroll);
+
+
+</script>
+</body>
+</html>

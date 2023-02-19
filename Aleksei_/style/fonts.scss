@@ -1,0 +1,26 @@
+
+
+
+@font-face {
+  font-family: 'russianrail-g-pro-medium';
+  src: url('../fonts/russianrail-g-pro-medium.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'RussianRail-G-Pro-Bold_39007';
+  src: url('../fonts/RussianRail-G-Pro-Bold_39007.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'RussianRail-G-Pro_39011';
+  src: url('../fonts/RussianRail-G-Pro_39011.ttf') format('truetype');
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  -webkit-text-size-adjust: 100%;
+}

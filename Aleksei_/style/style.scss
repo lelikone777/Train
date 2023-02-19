@@ -1,0 +1,502 @@
+@import "fonts";
+
+:root {
+  font-size: 0.3125vw;
+}
+.scroll {
+  &-container {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height: 100vh;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  &-content {
+    display: flex;
+    gap: 30rem;
+    width: 200vw;
+    height: 100%;
+    padding: 30rem;
+    overflow: hidden;
+    .page {
+      position: relative;
+      width: 50%;
+    }
+    &-left {
+      padding-right: 30rem;
+      img.bag {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: block;
+        width: 320px;
+        max-width: 320px;
+      }
+      .start-button {
+        position: absolute;
+        left: -465px;
+        top: 0;
+        display: flex;
+        align-items: center;
+        border: none;
+        margin: 0;
+        padding: 0;
+        width: auto;
+        background-color: transparent;
+        span {
+          display: block;
+          position: relative;
+          width: 100%;
+          cursor: pointer;
+          font-family: 'Roboto', sans-serif;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 130%;
+          color: #000000;
+          &:hover {
+            border-bottom: 1px solid black;
+            transition-duration: 2s;
+          }
+        }
+        & img {
+          position: absolute;
+          right: -36px;
+          top: 0;
+          width: 23px;
+          height: 24px;
+          margin-left: 11px;
+          font-weight: 700;
+          margin-top: 6px;
+        }
+      }
+      h2.title {
+        position: absolute;
+        top: 8%;
+        left: 0;
+        display: block;
+        width: 969px;
+        font-family: 'RussianRail G Pro', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 58px;
+        color: #000000;
+        span {
+          background-color: #E8331A;
+          padding: 0 20px 12px 12px;
+          color: #fff;
+        }
+      }
+      .railway {
+        position: absolute;
+        right: 0;
+        height: 100%;
+        width: 895px;
+        &-img {
+          width: 100%;
+          height: 100%;
+        }
+        &-line1 {
+          position: absolute;
+          top: 1.5%;
+          right: 20%;
+          width: 70%;
+          height: 2px;
+          .trainPng {
+            position: absolute;
+            transform: translate(0, -50%);
+            width: 40px;
+            height: 40px;
+          }
+          .busPng {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            opacity: 0;
+          }
+        }
+        .bobble {
+          opacity: 0;
+          position: absolute;
+          right: 30%;
+          top: 30%;
+          /* max-width: 735px; */
+          width: 753px;
+          height: 153px;
+          background-image: url(../img/bobble.png);
+          -webkit-background-size: 120%;
+          background-size: cover;
+          background-repeat: no-repeat;
+          padding: 55px 75px 40px 88px;
+          font-family: 'Roboto', sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 130%;
+          /* or 26px */
+
+
+          color: #000000;
+
+        }
+      }
+    }
+    &-right {
+      .railway2 {
+        position: relative;
+        height: 100%;
+        &-img {
+          position: absolute;
+          bottom: 0;
+          right: -30rem;
+          width: 103%;
+          height: 200rem;
+        }
+        .shipPng {
+          position: absolute;
+          bottom: 0;
+          left: 50rem;
+          width: 40px;
+          height: 40px;
+        }
+        .planePng {
+          position: absolute;
+          bottom: 0;
+          left: 50rem;
+          opacity: 0;
+          width: 40px;
+          height: 40px;
+        }
+      }
+      .right-title {
+        display: block;
+        position: absolute;
+        top: -110px;
+        left: 80px;
+        font-family: 'RussianRail G Pro', sans-serif;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 40px;
+        line-height: 48px;
+
+        color: #000000;
+      }
+    }
+  }
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  &-box {
+    position: absolute;
+    bottom: 284px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 111;
+    width: 80%;
+    height: 254px;
+  }
+  &-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1182px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      background-image: url('../img/quotes.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 83px;
+      height: 66px;
+      top: 0;
+      left: 120px;
+    }
+    &-text {
+      width: 80%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: left;
+      font-family: 'Roboto', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 130%;
+      color: #000000;
+    }
+  }
+  &-button-next, &-button-prev {
+    content: '';
+    width: 60px;
+    height: 60px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    background: linear-gradient(180deg, #496172 0%, #618298 100%);
+    box-shadow: 4.08216e-16px 6.66667px 13.3333px rgba(17, 23, 27, 0.24), inset -1.27e-16px -2.07407px 2.07407px #465D6D, inset 1.27e-16px 2.07407px 2.07407px #65879E;
+    &:before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      content: '';
+      width: 15rem;
+      height: 15rem;
+      background-repeat: no-repeat;
+      -webkit-background-size: cover;
+      background-size: cover;
+    }
+  }
+  &-button-next {
+    right: 50px;
+    &:before {
+
+      background-image: url('../img/slider-right.png');
+    }
+    &:after {
+      content: '';
+    }
+  }
+  &-button-prev {
+    left: -25px;
+    &:before {
+      background-image: url('../img/slider-left.png');
+    }
+    &:after {
+      content: '';
+    }
+  }
+  &-pagination {
+    &-bullet {
+      position: absolute;
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      border-radius: 0;
+      //display: block;
+      width: 548px;
+      height: 119px;
+      top: 50rem;
+      background-image: url('../img/avatar.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-color: transparent;
+      display: none;
+      &[aria-current='true'] {
+        display: block;
+      }
+      &:before {
+        position: absolute;
+        display: block;
+        top: 10px;
+        left: 146px;
+        font-family: 'RussianRail G Pro', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 130%;
+        color: #000000;
+      }
+      &:after {
+        position: absolute;
+        display: block;
+        max-width: 280px;
+        text-align: left;
+        bottom: 10rem;
+        left: 146px;
+        font-family: 'RussianRail G Pro', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+
+        color: #000000;
+      }
+      &:nth-child(1) {
+        &:before {
+          content: "Евгений Константинов";
+        }
+        &:after {
+          content: "Директор директорского направления ООО РЖД";
+        }
+      }
+      &:nth-child(2) {
+        &:before {
+          content: "Николай Константинов";
+        }
+        &:after {
+          content: "Директор директорского направления ООО РЖД";
+        }
+      }
+      &:nth-child(3) {
+        &:before {
+          content: "Алексей Константинов";
+        }
+        &:after {
+          content: "Директор директорского направления ООО РЖД";
+        }
+      }
+      &-active {
+      }
+    }
+  }
+  &-scrollbar {
+    display: none;
+  }
+}
+
+
+.circle {
+  position: absolute;
+  bottom: 110px;
+  left: 320px;
+  width: 350px;
+  height: 350px;
+  &-round {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px dashed dimgrey;
+  }
+  &-text {
+    .text-main {
+      font-family: 'Muller', sans-serif;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 60px;
+      line-height: 119%;
+      text-align: center;
+      color: #000000;
+
+    }
+    .circle-subtext {
+      font-family: 'RussianRail G Pro', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 31px;
+      color: #000000;
+      max-width: 180px;
+      text-align: center;
+      margin: 22px auto 0;
+    }
+
+  }
+}
+
+
+
+.center-dot {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  animation: spin 9s linear;
+  -webkit-animation: spin 9s linear;
+}
+.center-dot > * {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+.one {
+  width: 36px;
+  height: 36px;
+  border-radius: 40px;
+  background: red;
+  margin: -7rem 0 0 calc(50% - 7rem);
+}
+
+@keyframes spin {
+  from {
+    transform: none;
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+//-----
+
+
+.percentage {
+  width:360px;
+  height:360px;
+}
+
+.percentage svg {
+  width:360px;
+  height:360px;
+}
+
+.percentage svg circle {
+  width: 360px;
+  height:360px;
+  fill:none;
+  stroke-width: 8px;
+  stroke:#fff;
+  transform: translate(5px,5px);
+  stroke-dasharray: 1200;
+  stroke-dashoffset: 1200;
+  stroke-linecap:round;
+
+}
+
+.box {
+  width: 100%;
+  height: 100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  position: absolute;
+  top: 0;
+}
+.box .percentage svg circle:nth-child(1){
+  stroke-dashoffset:0;
+  stroke:transparent;
+}
+
+.box .percentage svg circle:nth-child(2){
+  stroke-dashoffset: 0;
+  /*   stroke-dashoffset: calc (440 - (440*87)/100); */
+  stroke:red;
+  animation: circle-draw 10s linear ;
+  transition: 0.3s;
+}
+
+@keyframes circle-draw{
+  0% {
+    stroke-dashoffset: 1200;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+.percentage .number {
+  position: absolute;
+  top:0;
+  left:0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:100%;
+  height:100%;
+}
+
+
+
+
+@import "media";
+
+
+
+

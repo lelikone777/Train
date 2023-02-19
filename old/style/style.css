@@ -1,0 +1,438 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "russianrail-g-pro-medium";
+  src: url("../fonts/russianrail-g-pro-medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "RussianRail-G-Pro-Bold_39007";
+  src: url("../fonts/RussianRail-G-Pro-Bold_39007.ttf") format("truetype");
+}
+@font-face {
+  font-family: "RussianRail-G-Pro_39011";
+  src: url("../fonts/RussianRail-G-Pro_39011.ttf") format("truetype");
+}
+.scroll-container {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+.scroll-content {
+  display: flex;
+  gap: 30rem;
+  width: 200vw;
+  height: 100%;
+  padding: 30rem;
+  overflow: hidden;
+}
+.scroll-content .page {
+  position: relative;
+  width: 50%;
+}
+.scroll-content-left {
+  padding-right: 30rem;
+}
+.scroll-content-left img.bag {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100rem;
+  max-width: 280px;
+}
+.scroll-content-left .start-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 440px;
+  border: none;
+  background-color: transparent;
+}
+.scroll-content-left .start-button span {
+  display: block;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 130%;
+  color: #000000;
+  cursor: pointer;
+}
+.scroll-content-left .start-button span:hover {
+  text-decoration: underline;
+}
+.scroll-content-left .start-button img {
+  display: block;
+  width: 27px;
+  height: 28px;
+  margin-left: 11px;
+}
+.scroll-content-left h2.title {
+  display: block;
+  width: 970px;
+  height: 175px;
+  font-family: "RussianRail G Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 58px;
+  color: #000000;
+}
+.scroll-content-left h2.title span {
+  background-color: #E8331A;
+  padding: 2rem 4rem;
+  color: #fff;
+}
+.scroll-content-left .railway {
+  position: absolute;
+  right: 0;
+  height: 100%;
+}
+.scroll-content-left .railway-img {
+  width: 100%;
+  height: 100%;
+}
+.scroll-content-left .railway-line1 {
+  position: absolute;
+  top: 1.5%;
+  right: 20%;
+  width: 70%;
+  height: 2px;
+}
+.scroll-content-left .railway-line1 .trainPng {
+  position: absolute;
+  transform: translate(0, -50%);
+  width: 20rem;
+  height: 20rem;
+}
+.scroll-content-left .railway-line1 .busPng {
+  position: absolute;
+  width: 20rem;
+  height: 20rem;
+  opacity: 0;
+}
+.scroll-content-left .railway .bobble {
+  opacity: 0;
+  position: absolute;
+  right: 30%;
+  top: 30%;
+  font-size: 8rem;
+  /* max-width: 735px; */
+  width: 206rem;
+  padding: 16px;
+  background-image: url(../img/bobble.png);
+  -webkit-background-size: 120%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.scroll-content-right .railway2 {
+  position: relative;
+  height: 100%;
+}
+.scroll-content-right .railway2-img {
+  position: absolute;
+  bottom: 0;
+  right: -30rem;
+  width: 103%;
+  height: 200rem;
+}
+.scroll-content-right .railway2 .shipPng {
+  position: absolute;
+  bottom: 0;
+  left: 50rem;
+  width: 20rem;
+  height: 20rem;
+}
+.scroll-content-right .railway2 .planePng {
+  position: absolute;
+  bottom: 0;
+  left: 50rem;
+  opacity: 0;
+  width: 20rem;
+  height: 20rem;
+}
+.scroll-content-right .right-title {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 20rem;
+  font-family: "RussianRail-G-Pro-Bold_39007", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14rem;
+  line-height: 1.2;
+  color: #000000;
+}
+
+.swiper {
+  width: 100%;
+  height: 100rem;
+}
+.swiper-box {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 111;
+  width: 80%;
+}
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.swiper-slide:before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/quotes.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 38rem;
+  height: 30rem;
+  top: 0;
+  left: 27rem;
+}
+.swiper-slide-text {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  font-size: 8rem;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  color: #000000;
+}
+.swiper-button-next, .swiper-button-prev {
+  content: "";
+  width: 30rem;
+  height: 30rem;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  background: linear-gradient(180deg, #496172 0%, #618298 100%);
+  box-shadow: 0px 6.66667px 13.3333px rgba(17, 23, 27, 0.24), inset 0px -2.07407px 2.07407px #465D6D, inset 0px 2.07407px 2.07407px #65879E;
+}
+.swiper-button-next:before, .swiper-button-prev:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+  width: 15rem;
+  height: 15rem;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+.swiper-button-next {
+  right: -15rem;
+}
+.swiper-button-next:before {
+  background-image: url("../img/slider-right.png");
+}
+.swiper-button-next:after {
+  content: "";
+}
+.swiper-button-prev {
+  left: -20rem;
+}
+.swiper-button-prev:before {
+  background-image: url("../img/slider-left.png");
+}
+.swiper-button-prev:after {
+  content: "";
+}
+.swiper-pagination-bullet {
+  position: absolute;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  width: 200rem;
+  height: 50rem;
+  top: 50rem;
+  background-image: url("../img/avatar.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: transparent;
+  display: none;
+}
+.swiper-pagination-bullet[aria-current=true] {
+  display: block;
+}
+.swiper-pagination-bullet:before {
+  position: absolute;
+  display: block;
+  font-size: 10rem;
+  top: 4rem;
+  right: 30rem;
+}
+.swiper-pagination-bullet:after {
+  position: absolute;
+  display: block;
+  max-width: 70%;
+  font-size: 8rem;
+  text-align: left;
+  bottom: 10rem;
+  right: -4rem;
+}
+.swiper-pagination-bullet:nth-child(1):before {
+  content: "Евгений Константинов";
+}
+.swiper-pagination-bullet:nth-child(1):after {
+  content: "Директор директорского направления ООО РЖД";
+}
+.swiper-pagination-bullet:nth-child(2):before {
+  content: "Николай Константинов";
+}
+.swiper-pagination-bullet:nth-child(2):after {
+  content: "Директор директорского направления ООО РЖД";
+}
+.swiper-pagination-bullet:nth-child(3):before {
+  content: "Алексей Константинов";
+}
+.swiper-pagination-bullet:nth-child(3):after {
+  content: "Директор директорского направления ООО РЖД";
+}
+.swiper-scrollbar {
+  display: none;
+}
+
+.circle {
+  position: absolute;
+  bottom: 20%;
+  left: 20%;
+  width: 140px;
+  height: 140px;
+}
+.circle-round {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px dotted dimgrey;
+}
+
+.center-dot {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  animation: spin 9s linear;
+  -webkit-animation: spin 9s linear;
+}
+
+.center-dot > * {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+.one {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 40px;
+  background: red;
+  margin: -7rem 0 0 calc(50% - 7rem);
+}
+
+@keyframes spin {
+  from {
+    transform: none;
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.percentage {
+  width: 150px;
+  height: 150px;
+}
+
+.percentage svg {
+  width: 150px;
+  height: 150px;
+}
+
+.percentage svg circle {
+  width: 150px;
+  height: 150px;
+  fill: none;
+  stroke-width: 4px;
+  stroke: #fff;
+  transform: translate(5px, 5px);
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440;
+  stroke-linecap: round;
+}
+
+.box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+}
+
+.box .percentage svg circle:nth-child(1) {
+  stroke-dashoffset: 0;
+  stroke: transparent;
+}
+
+.box .percentage svg circle:nth-child(2) {
+  stroke-dashoffset: 0;
+  /*   stroke-dashoffset: calc (440 - (440*87)/100); */
+  stroke: red;
+  animation: circle-draw 9s linear;
+  transition: 0.3s;
+}
+
+@keyframes circle-draw {
+  0% {
+    stroke-dashoffset: 440;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+.percentage .number {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.circle-text {
+  max-width: 60%;
+  font-size: 12rem;
+  font-weight: bold;
+  text-align: center;
+}
+.circle-text .circle-subtext {
+  font-size: 7rem;
+  margin-top: 5rem;
+}
+
+@media (min-width: 478px) {
+  :root {
+    font-size: 1.71875px;
+  }
+}
+@media (orientation: landscape) and (max-height: 550px) {
+  :root {
+    font-size: 0.3125vh;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

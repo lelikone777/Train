@@ -1,0 +1,11 @@
+
+@media (min-width: 478px) {
+  :root {
+    font-size: 1.71875px;
+  }
+}
+@media (orientation: landscape) and (max-height: 550px) {
+  :root {
+    font-size: 0.3125vh;
+  }
+}

@@ -1,0 +1,495 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "russianrail-g-pro-medium";
+  src: url("../fonts/russianrail-g-pro-medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "RussianRail-G-Pro-Bold_39007";
+  src: url("../fonts/RussianRail-G-Pro-Bold_39007.ttf") format("truetype");
+}
+@font-face {
+  font-family: "RussianRail-G-Pro_39011";
+  src: url("../fonts/RussianRail-G-Pro_39011.ttf") format("truetype");
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+
+:root {
+  font-size: 0.3125vw;
+}
+
+.scroll-container {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  height: 100vh;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+.scroll-content {
+  display: flex;
+  gap: 30rem;
+  width: 200vw;
+  height: 100%;
+  padding: 30rem;
+  overflow: hidden;
+}
+.scroll-content .page {
+  position: relative;
+  width: 50%;
+}
+.scroll-content-left {
+  padding-right: 30rem;
+}
+.scroll-content-left img.bag {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 320px;
+  max-width: 320px;
+}
+.scroll-content-left .start-button {
+  position: absolute;
+  left: -465px;
+  top: 0;
+  display: flex;
+  align-items: center;
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  background-color: transparent;
+}
+.scroll-content-left .start-button span {
+  display: block;
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 130%;
+  color: #000000;
+}
+.scroll-content-left .start-button span:hover {
+  border-bottom: 1px solid black;
+  transition-duration: 2s;
+}
+.scroll-content-left .start-button img {
+  position: absolute;
+  right: -36px;
+  top: 0;
+  width: 23px;
+  height: 24px;
+  margin-left: 11px;
+  font-weight: 700;
+  margin-top: 6px;
+}
+.scroll-content-left h2.title {
+  position: absolute;
+  top: 8%;
+  left: 0;
+  display: block;
+  width: 969px;
+  font-family: "RussianRail G Pro", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 58px;
+  color: #000000;
+}
+.scroll-content-left h2.title span {
+  background-color: #E8331A;
+  padding: 0 20px 12px 12px;
+  color: #fff;
+}
+.scroll-content-left .railway {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 895px;
+}
+.scroll-content-left .railway-img {
+  width: 100%;
+  height: 100%;
+}
+.scroll-content-left .railway-line1 {
+  position: absolute;
+  top: 1.5%;
+  right: 20%;
+  width: 70%;
+  height: 2px;
+}
+.scroll-content-left .railway-line1 .trainPng {
+  position: absolute;
+  transform: translate(0, -50%);
+  width: 40px;
+  height: 40px;
+}
+.scroll-content-left .railway-line1 .busPng {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  opacity: 0;
+}
+.scroll-content-left .railway .bobble {
+  opacity: 0;
+  position: absolute;
+  right: 30%;
+  top: 30%;
+  /* max-width: 735px; */
+  width: 753px;
+  height: 153px;
+  background-image: url(../img/bobble.png);
+  -webkit-background-size: 120%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 55px 75px 40px 88px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 130%;
+  /* or 26px */
+  color: #000000;
+}
+.scroll-content-right .railway2 {
+  position: relative;
+  height: 100%;
+}
+.scroll-content-right .railway2-img {
+  position: absolute;
+  bottom: 0;
+  right: -30rem;
+  width: 103%;
+  height: 200rem;
+}
+.scroll-content-right .railway2 .shipPng {
+  position: absolute;
+  bottom: 0;
+  left: 50rem;
+  width: 40px;
+  height: 40px;
+}
+.scroll-content-right .railway2 .planePng {
+  position: absolute;
+  bottom: 0;
+  left: 50rem;
+  opacity: 0;
+  width: 40px;
+  height: 40px;
+}
+.scroll-content-right .right-title {
+  display: block;
+  position: absolute;
+  top: -110px;
+  left: 80px;
+  font-family: "RussianRail G Pro", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 48px;
+  color: #000000;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+.swiper-box {
+  position: absolute;
+  bottom: 284px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 111;
+  width: 80%;
+  height: 254px;
+}
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1182px;
+}
+.swiper-slide:before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/quotes.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 83px;
+  height: 66px;
+  top: 0;
+  left: 120px;
+}
+.swiper-slide-text {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 130%;
+  color: #000000;
+}
+.swiper-button-next, .swiper-button-prev {
+  content: "";
+  width: 60px;
+  height: 60px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  background: linear-gradient(180deg, #496172 0%, #618298 100%);
+  box-shadow: 0px 6.66667px 13.3333px rgba(17, 23, 27, 0.24), inset 0px -2.07407px 2.07407px #465D6D, inset 0px 2.07407px 2.07407px #65879E;
+}
+.swiper-button-next:before, .swiper-button-prev:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+  width: 15rem;
+  height: 15rem;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+.swiper-button-next {
+  right: 50px;
+}
+.swiper-button-next:before {
+  background-image: url("../img/slider-right.png");
+}
+.swiper-button-next:after {
+  content: "";
+}
+.swiper-button-prev {
+  left: -25px;
+}
+.swiper-button-prev:before {
+  background-image: url("../img/slider-left.png");
+}
+.swiper-button-prev:after {
+  content: "";
+}
+.swiper-pagination-bullet {
+  position: absolute;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  width: 548px;
+  height: 119px;
+  top: 50rem;
+  background-image: url("../img/avatar.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: transparent;
+  display: none;
+}
+.swiper-pagination-bullet[aria-current=true] {
+  display: block;
+}
+.swiper-pagination-bullet:before {
+  position: absolute;
+  display: block;
+  top: 10px;
+  left: 146px;
+  font-family: "RussianRail G Pro", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 130%;
+  color: #000000;
+}
+.swiper-pagination-bullet:after {
+  position: absolute;
+  display: block;
+  max-width: 280px;
+  text-align: left;
+  bottom: 10rem;
+  left: 146px;
+  font-family: "RussianRail G Pro", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+}
+.swiper-pagination-bullet:nth-child(1):before {
+  content: "Евгений Константинов";
+}
+.swiper-pagination-bullet:nth-child(1):after {
+  content: "Директор директорского направления ООО РЖД";
+}
+.swiper-pagination-bullet:nth-child(2):before {
+  content: "Николай Константинов";
+}
+.swiper-pagination-bullet:nth-child(2):after {
+  content: "Директор директорского направления ООО РЖД";
+}
+.swiper-pagination-bullet:nth-child(3):before {
+  content: "Алексей Константинов";
+}
+.swiper-pagination-bullet:nth-child(3):after {
+  content: "Директор директорского направления ООО РЖД";
+}
+.swiper-scrollbar {
+  display: none;
+}
+
+.circle {
+  position: absolute;
+  bottom: 110px;
+  left: 320px;
+  width: 350px;
+  height: 350px;
+}
+.circle-round {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px dashed dimgrey;
+}
+.circle-text .text-main {
+  font-family: "Muller", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 60px;
+  line-height: 119%;
+  text-align: center;
+  color: #000000;
+}
+.circle-text .circle-subtext {
+  font-family: "RussianRail G Pro", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 31px;
+  color: #000000;
+  max-width: 180px;
+  text-align: center;
+  margin: 22px auto 0;
+}
+
+.center-dot {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  animation: spin 9s linear;
+  -webkit-animation: spin 9s linear;
+}
+
+.center-dot > * {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+.one {
+  width: 36px;
+  height: 36px;
+  border-radius: 40px;
+  background: red;
+  margin: -7rem 0 0 calc(50% - 7rem);
+}
+
+@keyframes spin {
+  from {
+    transform: none;
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.percentage {
+  width: 360px;
+  height: 360px;
+}
+
+.percentage svg {
+  width: 360px;
+  height: 360px;
+}
+
+.percentage svg circle {
+  width: 360px;
+  height: 360px;
+  fill: none;
+  stroke-width: 8px;
+  stroke: #fff;
+  transform: translate(5px, 5px);
+  stroke-dasharray: 1200;
+  stroke-dashoffset: 1200;
+  stroke-linecap: round;
+}
+
+.box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+}
+
+.box .percentage svg circle:nth-child(1) {
+  stroke-dashoffset: 0;
+  stroke: transparent;
+}
+
+.box .percentage svg circle:nth-child(2) {
+  stroke-dashoffset: 0;
+  /*   stroke-dashoffset: calc (440 - (440*87)/100); */
+  stroke: red;
+  animation: circle-draw 10s linear;
+  transition: 0.3s;
+}
+
+@keyframes circle-draw {
+  0% {
+    stroke-dashoffset: 1200;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+.percentage .number {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 478px) {
+  :root {
+    font-size: 1.71875px;
+  }
+}
+@media (orientation: landscape) and (max-height: 550px) {
+  :root {
+    font-size: 0.3125vh;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
